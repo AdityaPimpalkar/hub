@@ -516,7 +516,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-postgresql",
-              "version": "0.2.0"
+              "version": "0.3.0"
             }
           },
           "defaultChannel": "stable"
@@ -985,7 +985,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-09-25T09:32:41+03:00",
+    "generatedAt": "2026-09-29T09:19:19+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 14
   }
