@@ -157,7 +157,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/adityapimpalkar/charts/provider-cloudnative-pg",
-              "version": "0.2.2"
+              "version": "0.3.0"
             }
           },
           "defaultChannel": "stable"
@@ -165,7 +165,10 @@
       },
       "capabilities": {
         "backups": true,
+        "backups.scheduled": true,
         "ha": true,
+        "monitoring": false,
+        "pitr": true,
         "postgresql.versions": [
           "14.23",
           "15.18",
@@ -174,6 +177,9 @@
           "18.4"
         ],
         "restores": true,
+        "scaling.horizontal": true,
+        "scaling.vertical": true,
+        "storage.expansion": true,
         "topologies": [
           "replicaSet"
         ]
@@ -183,7 +189,7 @@
         "postgresql"
       ],
       "compatibility": {
-        "openeverest": ">=2.0.0-dev.2"
+        "openeverest": ">=2.0.0-dev.3"
       },
       "description": "Highly available PostgreSQL clusters powered by the CloudNativePG\noperator. Supports replica-set topologies with bootstrap, managed roles,\nand PostgreSQL tuning.\n",
       "displayName": "PostgreSQL (CNPG)",
@@ -985,7 +991,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-09-29T19:22:50+03:00",
+    "generatedAt": "2026-10-06T13:23:26+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 14
   }
