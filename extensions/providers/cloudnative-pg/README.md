@@ -23,7 +23,7 @@ subchart and is installed automatically with the provider.
 ```bash
 helm install provider-cloudnative-pg \
   oci://ghcr.io/adityapimpalkar/charts/provider-cloudnative-pg \
-  --version 0.1.1 \
+  --version 0.3.0 \
   --namespace everest-system \
   --create-namespace
 ```
