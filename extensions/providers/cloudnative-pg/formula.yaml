@@ -35,12 +35,18 @@ spec:
       - postgresql
 
   compatibility:
-    openeverest: ">=2.0.0-dev.2"
+    openeverest: ">=2.0.0-dev.3"
 
   capabilities:
     ha: true
     backups: true
     restores: true
+    pitr: true
+    backups.scheduled: true
+    scaling.horizontal: true
+    scaling.vertical: true
+    storage.expansion: true
+    monitoring: false
     topologies: ["replicaSet"]
     postgresql.versions: ["14.23", "15.18", "16.14", "17.10", "18.4"]
 
@@ -50,7 +56,7 @@ spec:
       channels:
         stable:
           ref: oci://ghcr.io/adityapimpalkar/charts/provider-cloudnative-pg
-          version: "0.2.2"
+          version: "0.3.0"
 
   install:
     prerequisites:
