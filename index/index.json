@@ -306,7 +306,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-kserve",
-              "version": "0.2.3"
+              "version": "0.2.4"
             }
           },
           "defaultChannel": "stable"
@@ -395,7 +395,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-mariadb",
-              "version": "0.1.7"
+              "version": "0.1.8"
             }
           },
           "defaultChannel": "stable"
@@ -466,7 +466,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-milvus",
-              "version": "0.1.0"
+              "version": "0.1.1"
             }
           },
           "defaultChannel": "stable"
@@ -944,7 +944,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-inspector",
-              "version": "0.1.0"
+              "version": "0.1.1"
             }
           },
           "defaultChannel": "stable"
@@ -1219,7 +1219,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-valkey",
-              "version": "0.1.7"
+              "version": "0.1.8"
             }
           },
           "defaultChannel": "stable"
@@ -1280,7 +1280,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-08T19:07:42+03:00",
+    "generatedAt": "2026-10-13T10:56:06+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 18
   }
