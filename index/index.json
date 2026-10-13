@@ -944,7 +944,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-inspector",
-              "version": "0.1.0"
+              "version": "0.1.1"
             }
           },
           "defaultChannel": "stable"
@@ -1280,7 +1280,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-08T19:07:42+03:00",
+    "generatedAt": "2026-10-13T10:43:32+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 18
   }
