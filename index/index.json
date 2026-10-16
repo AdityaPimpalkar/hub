@@ -306,7 +306,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-kserve",
-              "version": "0.3.0"
+              "version": "0.4.0"
             }
           },
           "defaultChannel": "stable"
@@ -1280,7 +1280,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-16T11:37:26+03:00",
+    "generatedAt": "2026-10-16T13:16:25+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 18
   }
