@@ -157,7 +157,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/adityapimpalkar/charts/provider-cloudnative-pg",
-              "version": "0.3.1"
+              "version": "0.3.2"
             }
           },
           "defaultChannel": "stable"
@@ -1280,7 +1280,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-15T21:33:19+03:00",
+    "generatedAt": "2026-10-16T11:37:26+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 18
   }
