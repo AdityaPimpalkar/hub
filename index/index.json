@@ -395,7 +395,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-mariadb",
-              "version": "0.1.9"
+              "version": "0.2.0"
             }
           },
           "defaultChannel": "stable"
@@ -1280,7 +1280,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-16T13:16:25+03:00",
+    "generatedAt": "2026-10-19T11:03:20+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 18
   }
