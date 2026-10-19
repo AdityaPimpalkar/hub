@@ -673,6 +673,85 @@
         "chart": {
           "channels": {
             "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/provider-percona-server-mysql",
+              "version": "0.2.0"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "capabilities": {
+        "backups": true,
+        "backups.scheduled": true,
+        "ha": true,
+        "monitoring": true,
+        "mysql.versions": [
+          "8.0",
+          "8.4"
+        ],
+        "pitr": false,
+        "restores": true,
+        "scaling.horizontal": true,
+        "scaling.vertical": true,
+        "storage.expansion": true,
+        "topologies": [
+          "async",
+          "groupreplication"
+        ]
+      },
+      "categories": [
+        "database",
+        "mysql"
+      ],
+      "compatibility": {
+        "kubernetes": ">=1.30 <1.35",
+        "openeverest": ">=2.0.0-dev.4"
+      },
+      "description": "Highly available MySQL clusters powered by the Percona Operator for MySQL\nbased on Percona Server for MySQL, with async replication and MySQL\nGroup Replication topologies.\n",
+      "displayName": "MySQL (PS Group Replication)",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/provider-percona-server-mysql",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/providers/percona-server-mysql/mysql_icon.png",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "provider-percona-server-mysql"
+        }
+      },
+      "keywords": [
+        "mysql",
+        "percona",
+        "group-replication",
+        "async-replication",
+        "orchestrator"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "percona-server-mysql",
+      "plugin": null,
+      "provider": {
+        "providerName": "percona-server-mysql",
+        "supportedEngines": [
+          "mysql"
+        ]
+      },
+      "sourceRepo": "https://github.com/openeverest/provider-percona-server-mysql",
+      "type": "provider",
+      "verified": false
+    },
+    {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-server-mongodb",
               "version": "0.4.0"
             }
@@ -1280,8 +1359,8 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-19T11:03:20+03:00",
+    "generatedAt": "2026-10-19T12:00:00+03:00",
     "schemaVersion": "v1",
-    "totalExtensions": 18
+    "totalExtensions": 19
   }
 }
