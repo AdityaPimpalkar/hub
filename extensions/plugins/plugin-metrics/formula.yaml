@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=../../../schemas/formula-v1.json
+apiVersion: hub.openeverest.io/v1
+kind: Extension
+
+metadata:
+  name: plugin-metrics
+  type: plugin
+  displayName: "Metrics"
+  icon: ./metrics-icon.svg
+  description: |
+    Adds a Metrics tab to database cluster detail pages with CPU, memory and
+    engine-specific charts for the last hour or day, plus a search to chart any
+    other metric the instance exposes. Reads from Prometheus or PMM, scoped to
+    instances the user can read. Built-in dashboards for Milvus, Valkey,
+    MariaDB, MSSQL, Cassandra, PostgreSQL, TiDB, MongoDB and XtraDB Cluster.
+  categories:
+    - observability
+    - monitoring
+  keywords:
+    - metrics
+    - dashboards
+    - charts
+    - prometheus
+    - pmm
+  homepage: https://github.com/openeverest/plugin-metrics
+  sourceRepo: https://github.com/openeverest/plugin-metrics
+  license: Apache-2.0
+  maturity: alpha
+  maintainers:
+    - name: "OpenEverest Team"
+      email: "cncf-openeverest-maintainers@lists.cncf.io"
+      github: "openeverest"
+
+spec:
+  plugin:
+    contributes:
+      ui: true
+      backend: true
+      cli: false
+    extensionPoints:
+      - clusterDetailTab
+
+  compatibility:
+    openeverest: ">=2.0.0-dev.4"
+
+  artifacts:
+    chart:
+      defaultChannel: stable
+      channels:
+        stable:
+          ref: oci://ghcr.io/openeverest/charts/plugin-metrics
+          version: "0.2.0"
+
+  install:
+    helm:
+      releaseName: plugin-metrics
+      namespace: everest-system
