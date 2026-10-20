@@ -10,9 +10,8 @@ metadata:
   description: |
     Adds a Metrics tab to database cluster detail pages with CPU, memory and
     engine-specific charts for the last hour or day, plus a search to chart any
-    other metric the instance exposes. Reads from Prometheus or PMM, scoped to
-    instances the user can read. Built-in dashboards for Milvus, Valkey,
-    MariaDB, MSSQL, Cassandra, PostgreSQL, TiDB, MongoDB and XtraDB Cluster.
+    other metric the instance exposes. Reads from Prometheus, PMM and other sources, scoped to
+    instances the user can read. Built-in dashboards for various database engines.
   categories:
     - observability
     - monitoring
