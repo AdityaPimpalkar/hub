@@ -1084,6 +1084,69 @@
         "chart": {
           "channels": {
             "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/plugin-metrics",
+              "version": "0.2.0"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "categories": [
+        "observability",
+        "monitoring"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.4"
+      },
+      "description": "Adds a Metrics tab to database cluster detail pages with CPU, memory and\nengine-specific charts for the last hour or day, plus a search to chart any\nother metric the instance exposes. Reads from Prometheus, PMM and other sources, scoped to\ninstances the user can read. Built-in dashboards for various database engines.\n",
+      "displayName": "Metrics",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/plugin-metrics",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-metrics/metrics-icon.svg",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "plugin-metrics"
+        }
+      },
+      "keywords": [
+        "metrics",
+        "dashboards",
+        "charts",
+        "prometheus",
+        "pmm"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "plugin-metrics",
+      "plugin": {
+        "contributes": {
+          "backend": true,
+          "cli": false,
+          "ui": true
+        },
+        "extensionPoints": [
+          "clusterDetailTab"
+        ]
+      },
+      "provider": null,
+      "sourceRepo": "https://github.com/openeverest/plugin-metrics",
+      "type": "plugin",
+      "verified": false
+    },
+    {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-mongodb-explorer",
               "version": "0.1.18"
             }
@@ -1358,8 +1421,8 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-19T14:31:04+05:00",
+    "generatedAt": "2026-10-20T19:57:00+03:00",
     "schemaVersion": "v1",
-    "totalExtensions": 19
+    "totalExtensions": 20
   }
 }
