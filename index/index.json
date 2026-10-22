@@ -1287,7 +1287,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-tidb",
-              "version": "0.1.5"
+              "version": "0.2.0"
             }
           },
           "defaultChannel": "stable"
@@ -1421,7 +1421,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-20T22:03:29+03:00",
+    "generatedAt": "2026-10-22T17:59:28+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 20
   }
