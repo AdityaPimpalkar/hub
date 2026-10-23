@@ -8,7 +8,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-altinity-clickhouse",
-              "version": "0.1.2"
+              "version": "0.3.0"
             }
           },
           "defaultChannel": "stable"
@@ -157,7 +157,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/adityapimpalkar/charts/provider-cloudnative-pg",
-              "version": "0.3.2"
+              "version": "0.3.3"
             }
           },
           "defaultChannel": "stable"
@@ -306,7 +306,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-kserve",
-              "version": "0.4.0"
+              "version": "0.4.2"
             }
           },
           "defaultChannel": "stable"
@@ -395,7 +395,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-mariadb",
-              "version": "0.2.0"
+              "version": "0.2.1"
             }
           },
           "defaultChannel": "stable"
@@ -466,7 +466,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-milvus",
-              "version": "0.3.0"
+              "version": "0.3.1"
             }
           },
           "defaultChannel": "stable"
@@ -822,7 +822,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-xtradb-cluster",
-              "version": "0.3.2"
+              "version": "0.4.0"
             }
           },
           "defaultChannel": "stable"
@@ -1085,7 +1085,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-metrics",
-              "version": "0.2.0"
+              "version": "0.2.1"
             }
           },
           "defaultChannel": "stable"
@@ -1421,7 +1421,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-22T17:59:28+03:00",
+    "generatedAt": "2026-10-23T10:39:51+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 20
   }
