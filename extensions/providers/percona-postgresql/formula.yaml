@@ -6,7 +6,7 @@ metadata:
   name: percona-postgresql
   type: provider
   displayName: "PostgreSQL"
-  icon: ./postgresql_icon.png
+  icon: ./postgresql_icon.svg
   description: Production-ready PostgreSQL clusters powered by the Percona Operator for PostgreSQL.
   categories:
     - database
