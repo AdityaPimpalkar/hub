@@ -674,7 +674,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-server-mongodb",
-              "version": "0.4.1"
+              "version": "0.5.0"
             }
           },
           "defaultChannel": "stable"
@@ -1421,7 +1421,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-27T08:57:16+03:00",
+    "generatedAt": "2026-10-28T19:42:26+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 20
   }
