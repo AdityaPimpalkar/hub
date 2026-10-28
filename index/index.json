@@ -1085,7 +1085,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-metrics",
-              "version": "0.2.1"
+              "version": "0.2.2"
             }
           },
           "defaultChannel": "stable"
@@ -1211,7 +1211,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-seaweedfs",
-              "version": "0.1.2"
+              "version": "0.2.0"
             }
           },
           "defaultChannel": "stable"
@@ -1360,7 +1360,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-valkey",
-              "version": "0.1.9"
+              "version": "0.1.10"
             }
           },
           "defaultChannel": "stable"
@@ -1421,7 +1421,7 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-28T19:42:26+03:00",
+    "generatedAt": "2026-10-28T19:45:13+03:00",
     "schemaVersion": "v1",
     "totalExtensions": 20
   }
