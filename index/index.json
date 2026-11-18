@@ -8,7 +8,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-altinity-clickhouse",
-              "version": "0.3.0"
+              "version": "0.3.1"
             }
           },
           "defaultChannel": "stable"
@@ -50,7 +50,6 @@
           "releaseName": "provider-altinity-clickhouse"
         }
       },
-      "integration": null,
       "keywords": [
         "clickhouse",
         "altinity",
@@ -125,7 +124,6 @@
           "releaseName": "provider-cassandra"
         }
       },
-      "integration": null,
       "keywords": [
         "cassandra",
         "nosql",
@@ -216,7 +214,6 @@
           }
         ]
       },
-      "integration": null,
       "keywords": [
         "postgresql",
         "postgres",
@@ -275,7 +272,6 @@
           "releaseName": "my-plugin"
         }
       },
-      "integration": null,
       "keywords": [
         "hello-world",
         "starter",
@@ -315,7 +311,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-kserve",
-              "version": "0.4.4"
+              "version": "0.5.0"
             }
           },
           "defaultChannel": "stable"
@@ -369,7 +365,6 @@
           }
         ]
       },
-      "integration": null,
       "keywords": [
         "kserve",
         "vllm",
@@ -407,7 +402,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-mariadb",
-              "version": "0.2.1"
+              "version": "0.2.2"
             }
           },
           "defaultChannel": "stable"
@@ -453,7 +448,6 @@
           "releaseName": "provider-mariadb"
         }
       },
-      "integration": null,
       "keywords": [
         "mariadb",
         "mysql",
@@ -488,7 +482,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-milvus",
-              "version": "0.3.1"
+              "version": "0.3.2"
             }
           },
           "defaultChannel": "stable"
@@ -529,7 +523,6 @@
           "releaseName": "provider-milvus"
         }
       },
-      "integration": null,
       "keywords": [
         "milvus",
         "vector-database",
@@ -555,231 +548,6 @@
       },
       "sourceRepo": "https://github.com/openeverest/provider-milvus",
       "type": "provider",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/monitoring-coroot",
-              "version": "0.1.0"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "categories": [
-        "monitoring",
-        "observability"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.5"
-      },
-      "description": "Send the databases of OpenEverest instances to Coroot. Installs the\n`coroot` MonitoringClass and a controller that turns the provider's\nconnection endpoints into `coroot.com/*` pod annotations, so\ncoroot-cluster-agent discovers and connects to each database pod.\n",
-      "displayName": "Coroot",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/monitoring-coroot",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/integrations/monitoring-coroot/coroot-icon.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "monitoring-coroot"
-        },
-        "prerequisites": [
-          {
-            "description": "Coroot with coroot-cluster-agent, which connects to the annotated database pods. The agent is configured with the Coroot server and API key when it is installed.",
-            "installUrl": "https://docs.coroot.com/installation/k8s-operator",
-            "name": "Coroot"
-          }
-        ]
-      },
-      "integration": {
-        "area": "monitoring",
-        "monitoring": {
-          "classes": [
-            "coroot"
-          ],
-          "executionModes": [
-            "ExtensionManaged"
-          ],
-          "requires": {
-            "connection": true
-          }
-        }
-      },
-      "keywords": [
-        "coroot",
-        "observability",
-        "apm",
-        "metrics"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "monitoring-coroot",
-      "plugin": null,
-      "provider": null,
-      "sourceRepo": "https://github.com/openeverest/monitoring-coroot",
-      "type": "integration",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/monitoring-pmm",
-              "version": "0.1.0"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "categories": [
-        "monitoring",
-        "observability"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.5"
-      },
-      "description": "Send metrics and Query Analytics of OpenEverest database instances to a\nPercona Monitoring and Management (PMM) 3 server. Installs the `pmm`\nMonitoringClass and its controller; providers with native PMM support\n(Percona XtraDB Cluster, Percona Server for MongoDB, Percona PostgreSQL)\nrun pmm-client next to the databases.\n",
-      "displayName": "PMM",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/monitoring-pmm",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/integrations/monitoring-pmm/pmm-logo.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "monitoring-pmm"
-        },
-        "prerequisites": [
-          {
-            "description": "The PMM server the database instances send their metrics and Query Analytics to. It must be reachable from the cluster.",
-            "installUrl": "https://docs.percona.com/percona-monitoring-and-management/3/install-pmm/install-pmm-server/deployment-options/helm/index.html",
-            "name": "PMM 3 server"
-          }
-        ]
-      },
-      "integration": {
-        "area": "monitoring",
-        "monitoring": {
-          "classes": [
-            "pmm"
-          ],
-          "executionModes": [
-            "ProviderManaged"
-          ],
-          "nativeIntegration": "pmm"
-        }
-      },
-      "keywords": [
-        "pmm",
-        "percona",
-        "metrics",
-        "query-analytics"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "monitoring-pmm",
-      "plugin": null,
-      "provider": null,
-      "sourceRepo": "https://github.com/openeverest/monitoring-pmm",
-      "type": "integration",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/monitoring-prometheus",
-              "version": "0.1.0"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "categories": [
-        "monitoring",
-        "observability"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.5"
-      },
-      "description": "Send the metrics of OpenEverest database instances to a Prometheus run by\nthe Prometheus Operator. Installs the `prometheus` MonitoringClass and a\ncontroller that renders one PodMonitor per database component from the\nmetrics endpoints the provider publishes.\n",
-      "displayName": "Prometheus",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/monitoring-prometheus",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/integrations/monitoring-prometheus/prometheus-icon.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "monitoring-prometheus"
-        },
-        "prerequisites": [
-          {
-            "description": "Renders the generated PodMonitors; a Prometheus must select them.",
-            "helm": {
-              "createNamespace": true,
-              "namespace": "monitoring",
-              "oci": "oci://ghcr.io/prometheus-community/charts/kube-prometheus-stack"
-            },
-            "installUrl": "https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack",
-            "name": "Prometheus Operator"
-          }
-        ]
-      },
-      "integration": {
-        "area": "monitoring",
-        "monitoring": {
-          "classes": [
-            "prometheus"
-          ],
-          "executionModes": [
-            "ExtensionManaged"
-          ],
-          "requires": {
-            "metrics": true
-          }
-        }
-      },
-      "keywords": [
-        "prometheus",
-        "prometheus-operator",
-        "podmonitor",
-        "metrics"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "monitoring-prometheus",
-      "plugin": null,
-      "provider": null,
-      "sourceRepo": "https://github.com/openeverest/monitoring-prometheus",
-      "type": "integration",
       "verified": false
     },
     {
@@ -817,7 +585,6 @@
       "health": "unknown",
       "homepage": "https://solanica.io/mssql-on-kubernetes",
       "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/providers/mssql/mssql_icon.png",
-      "integration": null,
       "keywords": [
         "mssql",
         "sqlserver",
@@ -852,8 +619,81 @@
         "chart": {
           "channels": {
             "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/provider-opensearch",
+              "version": "0.1.0"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "capabilities": {
+        "backups": true,
+        "encryption": true,
+        "ha": true,
+        "monitoring": false,
+        "pitr": false,
+        "topologies": [
+          "standard"
+        ],
+        "versions": [
+          "3.7",
+          "3.8"
+        ]
+      },
+      "categories": [
+        "database",
+        "opensearch",
+        "search"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.3"
+      },
+      "description": "OpenSearch clusters powered by the OpenSearch Kubernetes Operator.\nSupports the standard topology, optional OpenSearch Dashboards, TLS\neverywhere, and S3-compatible snapshot backups and restore.\n",
+      "displayName": "OpenSearch",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/provider-opensearch",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/providers/opensearch/opensearch_icon.svg",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "provider-opensearch"
+        }
+      },
+      "keywords": [
+        "search",
+        "analytics",
+        "elasticsearch",
+        "dashboards"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "opensearch",
+      "plugin": null,
+      "provider": {
+        "providerName": "opensearch",
+        "supportedEngines": [
+          "opensearch"
+        ]
+      },
+      "sourceRepo": "https://github.com/openeverest/provider-opensearch",
+      "type": "provider",
+      "verified": false
+    },
+    {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-postgresql",
-              "version": "0.6.1"
+              "version": "0.6.2"
             }
           },
           "defaultChannel": "stable"
@@ -897,7 +737,6 @@
           "releaseName": "provider-percona-postgresql"
         }
       },
-      "integration": null,
       "keywords": [
         "postgresql",
         "postgres",
@@ -973,7 +812,6 @@
           "releaseName": "provider-percona-server-mongodb"
         }
       },
-      "integration": null,
       "keywords": [
         "nosql",
         "document-store",
@@ -1050,7 +888,6 @@
           "releaseName": "provider-percona-server-mysql"
         }
       },
-      "integration": null,
       "keywords": [
         "mysql",
         "percona",
@@ -1129,7 +966,6 @@
           "releaseName": "provider-percona-xtradb-cluster"
         }
       },
-      "integration": null,
       "keywords": [
         "mysql",
         "percona",
@@ -1190,7 +1026,6 @@
           "releaseName": "plugin-bench"
         }
       },
-      "integration": null,
       "keywords": [
         "benchmark",
         "performance",
@@ -1226,13 +1061,79 @@
       "verified": false
     },
     {
+      "access": "gated",
+      "capabilities": {
+        "cloneBranches": true,
+        "databaseBranching": true,
+        "promote": true,
+        "restorePoints": true,
+        "rollback": true,
+        "snapshotBranches": true,
+        "supportedProviders": [
+          "provider-cloudnative-pg",
+          "mariadb",
+          "mssql"
+        ]
+      },
+      "categories": [
+        "database",
+        "development",
+        "automation"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.4"
+      },
+      "description": "Create instant, writable branches of OpenEverest databases for development,\ntesting, migration validation and AI-agent workflows. Branch, reset, restore\nand promote database state without cloning production infrastructure.\nCommercial, gated extension provided by Solanica.\n",
+      "displayName": "Database Branching",
+      "gated": {
+        "contactUrl": "https://solanica.io/contact-us?utm_source=hub-plugin-branching",
+        "instructions": "Commercial license required. Contact Solanica to request access, licensing, and private registry credentials.",
+        "provider": "Solanica"
+      },
+      "health": "unknown",
+      "homepage": "https://solanica.io/docs/extensions/plugin-branching/overview",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-branching/branching-icon.svg",
+      "keywords": [
+        "branching",
+        "clone",
+        "snapshot",
+        "restore-point",
+        "rollback",
+        "ai-agents"
+      ],
+      "license": "EULA",
+      "maintainers": [
+        {
+          "email": "sales@solanica.io",
+          "github": "solanicaio",
+          "name": "Solanica"
+        }
+      ],
+      "maturity": "beta",
+      "name": "plugin-branching",
+      "plugin": {
+        "contributes": {
+          "backend": true,
+          "cli": false,
+          "ui": true
+        },
+        "extensionPoints": [
+          "clusterDetailTab"
+        ]
+      },
+      "provider": null,
+      "sourceRepo": "",
+      "type": "plugin",
+      "verified": false
+    },
+    {
       "access": "public",
       "artifacts": {
         "chart": {
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-hub",
-              "version": "0.1.16"
+              "version": "0.1.17"
             }
           },
           "defaultChannel": "stable"
@@ -1257,7 +1158,6 @@
           "releaseName": "plugin-hub"
         }
       },
-      "integration": null,
       "keywords": [
         "hub",
         "catalog",
@@ -1321,7 +1221,6 @@
           "releaseName": "plugin-inspector"
         }
       },
-      "integration": null,
       "keywords": [
         "pods",
         "logs",
@@ -1385,7 +1284,6 @@
           "releaseName": "plugin-metrics"
         }
       },
-      "integration": null,
       "keywords": [
         "metrics",
         "dashboards",
@@ -1424,6 +1322,72 @@
         "chart": {
           "channels": {
             "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/plugin-migrations",
+              "version": "0.1.2"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "categories": [
+        "database",
+        "migration",
+        "mongodb"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.4"
+      },
+      "description": "Migrates databases into OpenEverest with minimal downtime: a per-migration\nworker copies existing data (full load), keeps the target in sync with\nongoing changes (change data capture), and you trigger the cutover when\nyour application is ready to switch. The first engine moves MongoDB into\nPercona Server for MongoDB instances using Percona ClusterSync for MongoDB.\n",
+      "displayName": "Migrations",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/plugin-migrations",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-migrations/migrations-icon.svg",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "plugin-migrations"
+        }
+      },
+      "keywords": [
+        "migration",
+        "cdc",
+        "replication",
+        "cutover",
+        "mongodb",
+        "pcsm"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "plugin-migrations",
+      "plugin": {
+        "contributes": {
+          "backend": true,
+          "cli": false,
+          "ui": true
+        },
+        "extensionPoints": [
+          "route",
+          "sidebarItem"
+        ]
+      },
+      "provider": null,
+      "sourceRepo": "https://github.com/openeverest/plugin-migrations",
+      "type": "plugin",
+      "verified": false
+    },
+    {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-mongodb-explorer",
               "version": "0.1.19"
             }
@@ -1449,7 +1413,6 @@
           "releaseName": "mongo-explorer"
         }
       },
-      "integration": null,
       "keywords": [
         "mongodb",
         "query",
@@ -1479,6 +1442,72 @@
       },
       "provider": null,
       "sourceRepo": "https://github.com/openeverest/plugin-mongodb-explorer",
+      "type": "plugin",
+      "verified": false
+    },
+    {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/plugin-user-management",
+              "version": "0.2.2"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "categories": [
+        "security",
+        "access-management",
+        "database"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.4"
+      },
+      "description": "Adds a Users tab to database instance pages to create database users and\nmanage their roles, so teams stop sharing the admin account. Users are\nInstanceUser resources reconciled into the database, with generated\ncredentials stored in a Secret applications can mount. For models on the\nEnvoy AI Gateway, the same users are per-application API keys.\n",
+      "displayName": "User Management",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/plugin-user-management",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-user-management/users-icon.svg",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "plugin-user-management"
+        }
+      },
+      "keywords": [
+        "users",
+        "roles",
+        "credentials",
+        "api-keys",
+        "mongodb",
+        "postgresql",
+        "kserve"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "plugin-user-management",
+      "plugin": {
+        "contributes": {
+          "backend": true,
+          "cli": false,
+          "ui": true
+        },
+        "extensionPoints": [
+          "clusterDetailTab"
+        ]
+      },
+      "provider": null,
+      "sourceRepo": "https://github.com/openeverest/plugin-user-management",
       "type": "plugin",
       "verified": false
     },
@@ -1529,7 +1558,6 @@
           "releaseName": "provider-seaweedfs"
         }
       },
-      "integration": null,
       "keywords": [
         "seaweedfs",
         "s3",
@@ -1564,7 +1592,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-tidb",
-              "version": "0.2.2"
+              "version": "0.2.4"
             }
           },
           "defaultChannel": "stable"
@@ -1607,7 +1635,6 @@
           "releaseName": "provider-tidb"
         }
       },
-      "integration": null,
       "keywords": [
         "newsql",
         "htap",
@@ -1684,7 +1711,6 @@
           "releaseName": "provider-valkey"
         }
       },
-      "integration": null,
       "keywords": [
         "valkey",
         "key-value",
@@ -1716,8 +1742,8 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-30T22:21:33+03:00",
+    "generatedAt": "2026-11-18T17:18:39+03:00",
     "schemaVersion": "v1",
-    "totalExtensions": 23
+    "totalExtensions": 24
   }
 }
