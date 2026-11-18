@@ -783,6 +783,80 @@
       "verified": false
     },
     {
+      "access": "public",
+      "artifacts": {
+        "chart": {
+          "channels": {
+            "stable": {
+              "ref": "oci://ghcr.io/openeverest/charts/monitoring-victoriametrics",
+              "version": "0.1.0"
+            }
+          },
+          "defaultChannel": "stable"
+        }
+      },
+      "categories": [
+        "monitoring",
+        "observability"
+      ],
+      "compatibility": {
+        "openeverest": ">=2.0.0-dev.5"
+      },
+      "description": "Send the metrics of OpenEverest database instances to a VMAgent run by\nthe VictoriaMetrics Operator. Installs the `victoriametrics` MonitoringClass\nand a controller that renders one VMPodScrape per database component from\nthe metrics endpoints the provider publishes.\n",
+      "displayName": "VictoriaMetrics",
+      "health": "unknown",
+      "homepage": "https://github.com/openeverest/monitoring-victoriametrics",
+      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/integrations/monitoring-victoriametrics/victoriametrics-icon.svg",
+      "install": {
+        "helm": {
+          "namespace": "everest-system",
+          "releaseName": "monitoring-victoriametrics"
+        },
+        "prerequisites": [
+          {
+            "description": "Renders the generated VMPodScrapes; a VMAgent must select them.",
+            "installUrl": "https://docs.victoriametrics.com/operator/quick-start/",
+            "name": "VictoriaMetrics Operator"
+          }
+        ]
+      },
+      "integration": {
+        "area": "monitoring",
+        "monitoring": {
+          "classes": [
+            "victoriametrics"
+          ],
+          "executionModes": [
+            "ExtensionManaged"
+          ],
+          "requires": {
+            "metrics": true
+          }
+        }
+      },
+      "keywords": [
+        "victoriametrics",
+        "victoriametrics-operator",
+        "vmpodscrape",
+        "metrics"
+      ],
+      "license": "Apache-2.0",
+      "maintainers": [
+        {
+          "email": "cncf-openeverest-maintainers@lists.cncf.io",
+          "github": "openeverest",
+          "name": "OpenEverest Team"
+        }
+      ],
+      "maturity": "alpha",
+      "name": "monitoring-victoriametrics",
+      "plugin": null,
+      "provider": null,
+      "sourceRepo": "https://github.com/openeverest/monitoring-victoriametrics",
+      "type": "integration",
+      "verified": false
+    },
+    {
       "access": "gated",
       "capabilities": {
         "backups": true,
@@ -1716,8 +1790,8 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-10-30T22:21:33+03:00",
+    "generatedAt": "2026-10-30T22:21:41+03:00",
     "schemaVersion": "v1",
-    "totalExtensions": 23
+    "totalExtensions": 24
   }
 }
