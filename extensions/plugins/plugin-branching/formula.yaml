@@ -23,7 +23,7 @@ metadata:
     - restore-point
     - rollback
     - ai-agents
-  homepage: https://solanica.io
+  homepage: https://solanica.io/docs/extensions/plugin-branching/overview
   license: EULA
   maturity: beta
   access: gated

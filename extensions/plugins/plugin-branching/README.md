@@ -5,6 +5,8 @@ testing, migration validation, preview environments and AI-agent workflows.
 The plugin supports clone and snapshot branches, resets, restore points,
 rollback and promotion for supported providers.
 
+**Documentation:** https://solanica.io/docs/extensions/plugin-branching/overview
+
 ## Access
 
 This is a **gated**, commercial extension. It is listed in the hub for
