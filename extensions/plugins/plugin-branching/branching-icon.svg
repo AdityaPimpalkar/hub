@@ -1,17 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
   <title id="title">Database Branching</title>
-  <desc id="desc">A database cylinder with two connected branches</desc>
-  <defs>
-    <linearGradient id="bg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#35C2B2"/>
-      <stop offset="1" stop-color="#1265A8"/>
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#bg)"/>
-  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
-    <ellipse cx="43" cy="40" rx="20" ry="9" stroke-width="7"/>
-    <path d="M23 40v32c0 5 9 9 20 9s20-4 20-9V40M23 56c0 5 9 9 20 9s20-4 20-9" stroke-width="7"/>
-    <path d="M43 88v-1c14 0 17 10 17 18M60 45h16c18 0 14-14 27-14M60 68h17c17 0 15 21 26 21" stroke-width="7"/>
-    <path d="m96 24 8 7-8 7M96 82l8 7-8 7" stroke-width="7"/>
+  <desc id="desc">A continuous line splitting into two branches</desc>
+  <g fill="none" stroke="#1769AA" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 104V54c0-12 10-22 22-22h42"/>
+    <path d="M32 74c0 12 10 22 22 22h42"/>
+  </g>
+  <g fill="none" stroke="#35B7A9" stroke-width="8">
+    <circle cx="32" cy="104" r="8"/>
+    <circle cx="96" cy="32" r="8"/>
+    <circle cx="96" cy="96" r="8"/>
   </g>
 </svg>
