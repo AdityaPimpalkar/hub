@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=../../../schemas/formula-v1.json
+apiVersion: hub.openeverest.io/v1
+kind: Extension
+
+metadata:
+  name: plugin-branching
+  type: plugin
+  displayName: "Database Branching"
+  icon: ./branching-icon.svg
+  description: |
+    Create instant, writable branches of OpenEverest databases for development,
+    testing, migration validation and AI-agent workflows. Branch, reset, restore
+    and promote database state without cloning production infrastructure.
+    Commercial, gated extension provided by Solanica.
+  categories:
+    - database
+    - development
+    - automation
+  keywords:
+    - branching
+    - clone
+    - snapshot
+    - restore-point
+    - rollback
+    - ai-agents
+  homepage: https://solanica.io/docs/extensions/plugin-branching/overview
+  license: EULA
+  maturity: beta
+  access: gated
+  maintainers:
+    - name: "Solanica"
+      email: "sales@solanica.io"
+      github: "solanicaio"
+
+spec:
+  plugin:
+    contributes:
+      ui: true
+      backend: true
+      cli: false
+    extensionPoints:
+      - clusterDetailTab
+
+  compatibility:
+    openeverest: ">=2.0.0-dev.4"
+
+  capabilities:
+    databaseBranching: true
+    cloneBranches: true
+    snapshotBranches: true
+    restorePoints: true
+    rollback: true
+    promote: true
+    supportedProviders:
+      - provider-cloudnative-pg
+      - mariadb
+      - mssql
+
+  gated:
+    provider: "Solanica"
+    contactUrl: "https://solanica.io/contact-us?utm_source=hub-plugin-branching"
+    instructions: "Commercial license required. Contact Solanica to request access, licensing, and private registry credentials."
