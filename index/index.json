@@ -8,7 +8,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-altinity-clickhouse",
-              "version": "0.3.1"
+              "version": "0.3.0"
             }
           },
           "defaultChannel": "stable"
@@ -311,7 +311,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-kserve",
-              "version": "0.5.0"
+              "version": "0.4.4"
             }
           },
           "defaultChannel": "stable"
@@ -402,7 +402,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-mariadb",
-              "version": "0.2.2"
+              "version": "0.2.1"
             }
           },
           "defaultChannel": "stable"
@@ -482,7 +482,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-milvus",
-              "version": "0.3.2"
+              "version": "0.3.1"
             }
           },
           "defaultChannel": "stable"
@@ -619,81 +619,8 @@
         "chart": {
           "channels": {
             "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/provider-opensearch",
-              "version": "0.1.0"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "capabilities": {
-        "backups": true,
-        "encryption": true,
-        "ha": true,
-        "monitoring": false,
-        "pitr": false,
-        "topologies": [
-          "standard"
-        ],
-        "versions": [
-          "3.7",
-          "3.8"
-        ]
-      },
-      "categories": [
-        "database",
-        "opensearch",
-        "search"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.3"
-      },
-      "description": "OpenSearch clusters powered by the OpenSearch Kubernetes Operator.\nSupports the standard topology, optional OpenSearch Dashboards, TLS\neverywhere, and S3-compatible snapshot backups and restore.\n",
-      "displayName": "OpenSearch",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/provider-opensearch",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/providers/opensearch/opensearch_icon.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "provider-opensearch"
-        }
-      },
-      "keywords": [
-        "search",
-        "analytics",
-        "elasticsearch",
-        "dashboards"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "opensearch",
-      "plugin": null,
-      "provider": {
-        "providerName": "opensearch",
-        "supportedEngines": [
-          "opensearch"
-        ]
-      },
-      "sourceRepo": "https://github.com/openeverest/provider-opensearch",
-      "type": "provider",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-percona-postgresql",
-              "version": "0.6.2"
+              "version": "0.6.1"
             }
           },
           "defaultChannel": "stable"
@@ -1061,79 +988,13 @@
       "verified": false
     },
     {
-      "access": "gated",
-      "capabilities": {
-        "cloneBranches": true,
-        "databaseBranching": true,
-        "promote": true,
-        "restorePoints": true,
-        "rollback": true,
-        "snapshotBranches": true,
-        "supportedProviders": [
-          "provider-cloudnative-pg",
-          "mariadb",
-          "mssql"
-        ]
-      },
-      "categories": [
-        "database",
-        "development",
-        "automation"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.4"
-      },
-      "description": "Create instant, writable branches of OpenEverest databases for development,\ntesting, migration validation and AI-agent workflows. Branch, reset, restore\nand promote database state without cloning production infrastructure.\nCommercial, gated extension provided by Solanica.\n",
-      "displayName": "Database Branching",
-      "gated": {
-        "contactUrl": "https://solanica.io/contact-us?utm_source=hub-plugin-branching",
-        "instructions": "Commercial license required. Contact Solanica to request access, licensing, and private registry credentials.",
-        "provider": "Solanica"
-      },
-      "health": "unknown",
-      "homepage": "https://solanica.io/docs/extensions/plugin-branching/overview",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-branching/branching-icon.svg",
-      "keywords": [
-        "branching",
-        "clone",
-        "snapshot",
-        "restore-point",
-        "rollback",
-        "ai-agents"
-      ],
-      "license": "EULA",
-      "maintainers": [
-        {
-          "email": "sales@solanica.io",
-          "github": "solanicaio",
-          "name": "Solanica"
-        }
-      ],
-      "maturity": "beta",
-      "name": "plugin-branching",
-      "plugin": {
-        "contributes": {
-          "backend": true,
-          "cli": false,
-          "ui": true
-        },
-        "extensionPoints": [
-          "clusterDetailTab"
-        ]
-      },
-      "provider": null,
-      "sourceRepo": "",
-      "type": "plugin",
-      "verified": false
-    },
-    {
       "access": "public",
       "artifacts": {
         "chart": {
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-hub",
-              "version": "0.1.17"
+              "version": "0.1.16"
             }
           },
           "defaultChannel": "stable"
@@ -1322,72 +1183,6 @@
         "chart": {
           "channels": {
             "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/plugin-migrations",
-              "version": "0.1.2"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "categories": [
-        "database",
-        "migration",
-        "mongodb"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.4"
-      },
-      "description": "Migrates databases into OpenEverest with minimal downtime: a per-migration\nworker copies existing data (full load), keeps the target in sync with\nongoing changes (change data capture), and you trigger the cutover when\nyour application is ready to switch. The first engine moves MongoDB into\nPercona Server for MongoDB instances using Percona ClusterSync for MongoDB.\n",
-      "displayName": "Migrations",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/plugin-migrations",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-migrations/migrations-icon.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "plugin-migrations"
-        }
-      },
-      "keywords": [
-        "migration",
-        "cdc",
-        "replication",
-        "cutover",
-        "mongodb",
-        "pcsm"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "plugin-migrations",
-      "plugin": {
-        "contributes": {
-          "backend": true,
-          "cli": false,
-          "ui": true
-        },
-        "extensionPoints": [
-          "route",
-          "sidebarItem"
-        ]
-      },
-      "provider": null,
-      "sourceRepo": "https://github.com/openeverest/plugin-migrations",
-      "type": "plugin",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/plugin-mongodb-explorer",
               "version": "0.1.19"
             }
@@ -1442,72 +1237,6 @@
       },
       "provider": null,
       "sourceRepo": "https://github.com/openeverest/plugin-mongodb-explorer",
-      "type": "plugin",
-      "verified": false
-    },
-    {
-      "access": "public",
-      "artifacts": {
-        "chart": {
-          "channels": {
-            "stable": {
-              "ref": "oci://ghcr.io/openeverest/charts/plugin-user-management",
-              "version": "0.2.2"
-            }
-          },
-          "defaultChannel": "stable"
-        }
-      },
-      "categories": [
-        "security",
-        "access-management",
-        "database"
-      ],
-      "compatibility": {
-        "openeverest": ">=2.0.0-dev.4"
-      },
-      "description": "Adds a Users tab to database instance pages to create database users and\nmanage their roles, so teams stop sharing the admin account. Users are\nInstanceUser resources reconciled into the database, with generated\ncredentials stored in a Secret applications can mount. For models on the\nEnvoy AI Gateway, the same users are per-application API keys.\n",
-      "displayName": "User Management",
-      "health": "unknown",
-      "homepage": "https://github.com/openeverest/plugin-user-management",
-      "icon": "https://raw.githubusercontent.com/openeverest/hub/main/extensions/plugins/plugin-user-management/users-icon.svg",
-      "install": {
-        "helm": {
-          "namespace": "everest-system",
-          "releaseName": "plugin-user-management"
-        }
-      },
-      "keywords": [
-        "users",
-        "roles",
-        "credentials",
-        "api-keys",
-        "mongodb",
-        "postgresql",
-        "kserve"
-      ],
-      "license": "Apache-2.0",
-      "maintainers": [
-        {
-          "email": "cncf-openeverest-maintainers@lists.cncf.io",
-          "github": "openeverest",
-          "name": "OpenEverest Team"
-        }
-      ],
-      "maturity": "alpha",
-      "name": "plugin-user-management",
-      "plugin": {
-        "contributes": {
-          "backend": true,
-          "cli": false,
-          "ui": true
-        },
-        "extensionPoints": [
-          "clusterDetailTab"
-        ]
-      },
-      "provider": null,
-      "sourceRepo": "https://github.com/openeverest/plugin-user-management",
       "type": "plugin",
       "verified": false
     },
@@ -1592,7 +1321,7 @@
           "channels": {
             "stable": {
               "ref": "oci://ghcr.io/openeverest/charts/provider-tidb",
-              "version": "0.2.4"
+              "version": "0.2.2"
             }
           },
           "defaultChannel": "stable"
@@ -1742,8 +1471,8 @@
   "kind": "ExtensionIndex",
   "metadata": {
     "catalogId": "openeverest-official",
-    "generatedAt": "2026-11-18T17:18:39+03:00",
+    "generatedAt": "2026-10-29T11:18:28+03:00",
     "schemaVersion": "v1",
-    "totalExtensions": 24
+    "totalExtensions": 20
   }
 }
